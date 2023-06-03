@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="row g-3 needs-validation mt-3" novalidate>
+        <div class="col-12 col-md-6">
+          <label for="validationCustom01" class="form-label">Code</label>
+          <input
+            type="text"
+            pattern="^[1-9]\d*$"
+            class="form-control"
+            id="validationCustom01"
+            required
+          />
+          <div class="valid-feedback">Approved!</div>
+          <div class="invalid-feedback">Please enter the field</div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="validationCustom01" class="form-label">Barcode</label>
+          <input
+            type="text"
+            maxlength="19"
+            placeholder="1234 5678 9101 1121"
+            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+            id="card-number"
+            class="form-control"
+            id="validationCustom01"
+            required
+          />
+          <div class="valid-feedback">Approved!</div>
+          <div class="invalid-feedback">Please enter the field</div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="">Unit Price</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">$0.00</span>
+            <input
+              type="text"
+              pattern="[0-9]+(\.[0-9]{1,2})?"
+              class="form-control"
+              id="validationCustom01"
+              required
+            />
+          </div>
+          <div class="valid-feedback">Approved!</div>
+          <div class="invalid-feedback">Please enter the field</div>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <label for="">Stocks</label>
+          <input
+            type="text"
+            class="form-control"
+            pattern="^[1-9]\d*$"
+            id="validationCustom01"
+            required
+          />
+          <div class="valid-feedback">Approved!</div>
+          <div class="invalid-feedback">Please enter the field</div>
+        </div>
+
+        <div class="col-12">
+          <label class="form-check-label" for="invalidCheck">Status </label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              onclick="mostrarTextoLabel()"
+              value=""
+              id="invalidCheck"
+              required
+            />
+            <label
+              class="form-check-label"
+              id="textoLabel"
+              for="invalidCheck"
+              style="display: none"
+            >
+              Active
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="" class="text-center">
+              Choose category
+            </option>
+            <option>Category 1</option>
+            <option>Category 2</option>
+            <option>Category 3</option>
+          </select>
+          <div class="invalid-feedback">Please select a valid state.</div>
+        </div>
+
+        <div class="col-12">
+          <label for="validationCustom01" class="form-label">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom01"
+            required
+          />
+          <div class="valid-feedback">Approved!</div>
+          <div class="invalid-feedback">Please enter the field</div>
+        </div>
+
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+      </form>
+
+      <div class="col-12">
+        <a href="index.html">
+          <button class="btn btn-danger">Cancel</button>
+        </a>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
