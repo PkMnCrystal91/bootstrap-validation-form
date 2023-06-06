@@ -49,12 +49,38 @@ cardNumber.addEventListener("keyup", (e) => {
 });
 
 function mostrarTextoLabel() {
-  var checkbox = document.getElementById("invalidCheck");
-  var textoLabel = document.getElementById("textoLabel");
+  let checkbox = document.getElementById("invalidCheck");
+  let textoLabel = document.getElementById("textoLabel");
 
   if (checkbox.checked) {
     textoLabel.style.display = "block"; // Mostrar el texto
   } else {
     textoLabel.style.display = "none"; // Ocultar el texto
   }
+}
+
+function borrarCampos() {
+  let formulario = document.getElementById("miFormulario");
+
+  for (let i = 0; i < formulario.elements.length; i++) {
+    let elemento = formulario.elements[i];
+
+    if (
+      elemento.type === "text" ||
+      elemento.type === "password" ||
+      elemento.tagName === "TEXTAREA"
+    ) {
+      elemento.value = "";
+    }
+
+    // Verificar si es una casilla de verificación o botón de radio
+    else if (elemento.type === "checkbox" || elemento.type === "radio") {
+      elemento.checked = false;
+    } else if (elemento.tagName === "SELECT") {
+      elemento.selectedIndex = 0;
+    }
+  }
+
+  let textoLabel = document.getElementById("textoLabel");
+  textoLabel.style.display = "none";
 }

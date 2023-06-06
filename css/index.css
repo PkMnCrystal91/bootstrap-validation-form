@@ -1,7 +1,52 @@
-.container {
-  background: yellow;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: auto;
+}
+
+body {
+  background: #20232a;
+  color: white;
+}
+
+label: {
+}
+
+label:hover {
+  cursor: pointer;
+  color: #f1c841;
 }
 
 form {
-  background: blue;
+  max-width: 821px;
+  min-width: 375px;
+  border: solid 1px #61dafb;
+  position: relative;
+}
+
+.form-title {
+  text-shadow: 2px 2px 4px white;
+  position: absolute;
+  top: -21px;
+}
+
+@media (max-width: 767px) {
+  form {
+    border: none;
+  }
+
+  .form-title {
+    position: static;
+    text-shadow: none;
+  }
+
+  .btn-primary {
+    margin-bottom: 8px;
+  }
+
+  .label-box {
+    display: flex;
+    justify-content: start;
+  }
 }

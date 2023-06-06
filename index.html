@@ -9,124 +9,169 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <div class="container">
-      <form class="row g-3 needs-validation mt-3" novalidate>
-        <div class="col-12 col-md-6">
-          <label for="validationCustom01" class="form-label">Code</label>
-          <input
-            type="text"
-            pattern="^[1-9]\d*$"
-            class="form-control"
-            id="validationCustom01"
-            required
-          />
-          <div class="valid-feedback">Approved!</div>
-          <div class="invalid-feedback">Please enter the field</div>
-        </div>
+    <div class="container-fluid d-flex justify-content-center">
+      <form
+        class="row needs-validation p-4 mt-4"
+        id="miFormulario"
+        action="sucess.html"
+        novalidate
+      >
+        <p class="form-title fs-5"><strong>Registro de producto</strong></p>
 
-        <div class="col-12 col-md-6">
-          <label for="validationCustom01" class="form-label">Barcode</label>
-          <input
-            type="text"
-            maxlength="19"
-            placeholder="1234 5678 9101 1121"
-            onkeypress="return event.charCode >= 48 && event.charCode <= 57"
-            id="card-number"
-            class="form-control"
-            id="validationCustom01"
-            required
-          />
-          <div class="valid-feedback">Approved!</div>
-          <div class="invalid-feedback">Please enter the field</div>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <label for="">Unit Price</label>
-          <div class="input-group has-validation">
-            <span class="input-group-text" id="inputGroupPrepend">$0.00</span>
+        <div class="col-11 mx-auto mb-4 row d-flex justify-content-center mt-4">
+          <div class="label-box col-12 col-md-2" style="text-align: end">
+            <label class="mt-1 fs-5" for="">Code:</label>
+          </div>
+          <div class="col-12 col-md-8">
             <input
               type="text"
-              pattern="[0-9]+(\.[0-9]{1,2})?"
+              placeholder="Please enter a code"
+              pattern="^[1-9]\d*$"
               class="form-control"
               id="validationCustom01"
               required
             />
+            <div class="valid-feedback">Approved!</div>
+            <div class="invalid-feedback">Please enter the field</div>
           </div>
-          <div class="valid-feedback">Approved!</div>
-          <div class="invalid-feedback">Please enter the field</div>
         </div>
 
-        <div class="col-12 col-md-6">
-          <label for="">Stocks</label>
-          <input
-            type="text"
-            class="form-control"
-            pattern="^[1-9]\d*$"
-            id="validationCustom01"
-            required
-          />
-          <div class="valid-feedback">Approved!</div>
-          <div class="invalid-feedback">Please enter the field</div>
-        </div>
-
-        <div class="col-12">
-          <label class="form-check-label" for="invalidCheck">Status </label>
-          <div class="form-check">
+        <div class="col-11 mx-auto mb-4 row d-flex justify-content-center">
+          <div class="label-box col-12 col-md-2" style="text-align: end">
+            <label class="mt-1 fs-5" for="">Description:</label>
+          </div>
+          <div class="col-12 col-md-8">
             <input
-              class="form-check-input"
-              type="checkbox"
-              onclick="mostrarTextoLabel()"
-              value=""
-              id="invalidCheck"
+              type="text"
+              placeholder="Please enter a description"
+              class="form-control"
+              id="validationCustom01"
               required
             />
-            <label
-              class="form-check-label"
-              id="textoLabel"
-              for="invalidCheck"
-              style="display: none"
-            >
-              Active
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
+            <div class="valid-feedback">Approved!</div>
+            <div class="invalid-feedback">Please enter the field</div>
+          </div>
+        </div>
+
+        <div class="col-11 mx-auto mb-4 row d-flex justify-content-center">
+          <div class="label-box col-12 col-md-2" style="text-align: end">
+            <label class="mt-1 fs-5" for="validationCustom01">Barcode:</label>
+          </div>
+          <div class="col-12 col-md-8">
+            <input
+              type="text"
+              minlength="19"
+              maxlength="19"
+              placeholder="1234 5678 9101 1121"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+              id="card-number"
+              class="form-control"
+              id="validationCustom01"
+              required
+            />
+            <div class="valid-feedback">Approved!</div>
+            <div class="invalid-feedback">Please enter the field</div>
+          </div>
+        </div>
+
+        <div class="col-11 mx-auto mb-4 row d-flex justify-content-center">
+          <div class="label-box col-12 col-md-2" style="text-align: end">
+            <label class="mt-1 fs-5" for="">Unit price:</label>
+          </div>
+
+          <div class="col-12 col-md-8">
+            <input
+              type="text"
+              pattern="[0-9]+(\.[0-9]{1,2})?"
+              class="form-control"
+              placeholder="$0.00"
+              id="validationCustom01"
+              required
+            />
+            <div class="valid-feedback">Approved!</div>
+            <div class="invalid-feedback">Please enter the field</div>
+          </div>
+        </div>
+
+        <div class="col-11 mx-auto mb-4 row d-flex justify-content-center">
+          <div class="label-box col-12 col-md-2" style="text-align: end">
+            <label class="mt-1 fs-5" for="">Stock:</label>
+          </div>
+          <div class="col-12 col-md-8">
+            <input
+              type="text"
+              pattern="^[1-9]\d*$"
+              class="form-control"
+              placeholder=""
+              id="validationCustom01"
+              required
+            />
+            <div class="valid-feedback">Approved!</div>
+            <div class="invalid-feedback">Please enter the field</div>
+          </div>
+        </div>
+
+        <div class="col-11 mx-auto mb-4 row d-flex justify-content-center">
+          <div class="label-box col-12 col-md-2" style="text-align: end">
+            <label class="mt-1 fs-5" for="">Status:</label>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="form-check mt-1">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                onclick="mostrarTextoLabel()"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label
+                class="form-check-label"
+                id="textoLabel"
+                for="invalidCheck"
+                style="display: none"
+              >
+                Active
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <select class="form-select" id="validationCustom04" required>
-            <option selected disabled value="" class="text-center">
-              Choose category
-            </option>
-            <option>Category 1</option>
-            <option>Category 2</option>
-            <option>Category 3</option>
-          </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
+
+        <div class="col-11 mx-auto mb-4 row d-flex justify-content-center">
+          <div class="label-box col-12 col-md-2" style="text-align: end">
+            <label class="mt-1 fs-5" for="">Category:</label>
+          </div>
+          <div class="col-12 col-md-8 mb-4">
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="" class="text-center">
+                Choose category
+              </option>
+              <option>Category 1</option>
+              <option>Category 2</option>
+              <option>Category 3</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid category</div>
+          </div>
         </div>
 
-        <div class="col-12">
-          <label for="validationCustom01" class="form-label">Description</label>
-          <input
-            type="text"
-            class="form-control"
-            id="validationCustom01"
-            required
-          />
-          <div class="valid-feedback">Approved!</div>
-          <div class="invalid-feedback">Please enter the field</div>
-        </div>
-
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Submit form</button>
+        <div
+          class="col-12 col-md-11 mx-auto row mx-auto d-flex justify-content-between my-2"
+        >
+          <a href=""> </a>
+          <button class="btn btn-primary col-12 col-md-2" type="submit">
+            Submit
+          </button>
+          <button
+            class="btn btn-danger col-12 col-md-2"
+            onclick="borrarCampos()"
+          >
+            Cancel
+          </button>
         </div>
       </form>
-
-      <div class="col-12">
-        <a href="index.html">
-          <button class="btn btn-danger">Cancel</button>
-        </a>
-      </div>
     </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/index.js"></script>
