@@ -26,9 +26,10 @@ form {
 }
 
 .form-title {
-  text-shadow: 2px 2px 4px white;
   position: absolute;
   top: -21px;
+  background: #20232a;
+  width: 14rem;
 }
 
 @media (max-width: 767px) {
